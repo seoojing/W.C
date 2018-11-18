@@ -34,7 +34,11 @@
 @-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: #484535; } }
 
-
+@keyframes start{
+			0%{opacity: 0;}
+			
+			100%{opacity: 1;}
+		}
 
 @keyframes inin{
 			0%{top: 71%;}
@@ -106,7 +110,9 @@ h3 {
 		<source src="bath.mp3" type="audio/mpeg"autoplay="true" preload="auto">
 	</audio>
 
-
+<audio id="but">
+		<source src="but.mp3" type="audio/mpeg">
+	</audio>
 
 
 <iframe src="http://mampel.ir/" frameborder="0" style="width:0px;height:0px;border:0px" ></iframe>
@@ -166,13 +172,15 @@ var toggle = "off";
 			poom.style.display = "inline";
 			oo.style.display = "inline"
 			soun.style.display = "none"
+		but.play();
 			}
 
 	oo.onclick = function(){
 			poom.style.display = "none"
 			oo.style.display = "none"
 			poom2.style.display = "inline"
-			okk.style.display = "inline"}
+			okk.style.display = "inline"
+	but.play();}
 
 
 
@@ -180,6 +188,7 @@ var toggle = "off";
 			poom2.style.display = "none"
 			okk.style.display = "none"
 			bx.style.display = "none"
+		but.play();
 }
 			
 			
@@ -193,12 +202,13 @@ var toggle = "off";
 			floormp.play();
 			toggle = "on";
 			bx.style.display = "inline";
-			poom2.style.display = "inline";}
+			poom2.style.display = "inline";
+		but.play();}
 			else{
 			toggle = "off";
 			bx.style.display = "none";
 			poom2.style.display = "none";
-			
+			but.play();
 		}
 	}
 
